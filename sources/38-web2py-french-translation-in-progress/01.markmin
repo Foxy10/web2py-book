@@ -15,8 +15,8 @@ et les faire fonctionner ensemble.
 web2py est construit pour la sécurité. Cela signifie qu'il élimine automatiquement la plupart des problèmes
 qui peuvent amener à des failles de sécurité, en suivant des pratiques bien établies. Par
 exemple, toute entrée est validée (pour éviter les injections), toute sortie est contrôlée (pour éviter le cross-site scripting),
-et tout fichier uploadé est renommé (pour éviter toute attaque traverse de répertoireà.
-web2py fait attention aux principaux problèmes de sécurité, afin que les développeurs aient le moins de chande d'introduire des failles dans leur développement.
+et tout fichier uploadé est renommé (pour éviter toute attaque par traversée de répertoires).
+web2py fait attention aux principaux problèmes de sécurité, afin que les développeurs aient le moins de chance d'introduire des failles dans leur développement.
 
 web2py inclut une couche d'abstraction à la base de données (Database Abstraction Layer -DAL) qui écrit les requêtes SQL``sql-w``:cite  dynamiquement afin que vous, développeurs, n'ayez pas à le faire. Cette couche d'abstraction (DAL) sait parfaitement comment générer les requêtes SQL de manière transparente pour
 SQLite``sqlite``:cite, MySQL``mysql``:cite, PostgreSQL``postgres``:cite, MSSQL``mssql``:cite,
@@ -31,9 +31,9 @@ pour accéder à la base de données et aux tables.
 
 web2py diffère des autres frameworks web du fait que ce soit le seul à totalement adopter le paradigme Web 2.0,
 où le web est l'ordinateur. En fait, web2py ne nécessite aucune installation ou configuration; il
-fonctionne sur n'importe quelle architecture qui peut exécuter du Python (Windows, Windows CE, Mac OS X, iOS, et Unix/Linux), et le  développement, le déploiement, et les phases de maintenance phases pour les applications peuvent être faites via une interface web locale ou distante.  web2py fonctionne avec CPython (l'implémentation C) et PyPy (Python écrit en Python), sur les versions Python 2.5, 2.6, et 2.7.
+fonctionne sur n'importe quelle architecture qui peut exécuter du Python (Windows, Windows CE, Mac OS X, iOS, et Unix/Linux), et le  développement, le déploiement, et les phases de maintenance pour les applications peuvent être faites via une interface web locale ou distante.  web2py fonctionne avec CPython (l'implémentation C) et PyPy (Python écrit en Python), sur les versions Python 2.5, 2.6, et 2.7.
 
-web2py fournit un système de tickets pour les erreurs remontées. Si une erreur survient, un ticket est attribué à l'utilisateur
+web2py fournit un système de tickets pour les remontées d'erreurs. Si une erreur survient, un ticket est attribué à l'utilisateur
 et l'erreur est enregistrée pour l'administrateur.
 
 web2py est open source et distribué sous la licence LGPG version 3.
@@ -47,7 +47,7 @@ db.define_table('person', Field('name'), Field('image', 'upload'))
 ``:code
 
 créé une table de base de données appelée "person" avec deux champs : "name", une chaîne de caractères ; et "image", quelque chose qui a 
-besoin d'être uploadé (l'image actuelle dans ce cas). Si la table existe déjà mais ne correspond pas à cette définition, elle va être modifiée en conséquence.
+besoin d'être uploadé (l'image effective dans ce cas). Si la table existe déjà mais ne correspond pas à cette définition, elle va être modifiée en conséquence.
 
 Etant donné la table définie ci-dessus, le code suivant :
 ``
@@ -73,7 +73,7 @@ def f(): ....
 
 empêche les visiteurs d'accéder à la fonction ``f`` à moins que le visiteur soit un membre du groupe ayant les droits de "lecture" sur les enregistrement de la table "person". Si le visiteur n'est pas connecté, il est redirigé sur une page d'identification (fournie automatiquement par défaut par web2py).
 
-web2Py supporte également les composants, c'est à dire les actions qui peuvent être chargées dans une vue et intéragir avec le visiteur via des requêtes Ajax sans avoir à recharger la page entière. Ceci est fait via l'assistant ``LOAD`` qui autorise un design très modulaire des applications; ce sujet est traité dans le chapitre 3 dans le contexte du wiki et un peu plus en détails dans le dernier chapitre de ce livre.
+web2Py supporte également les composants, c'est à dire les actions qui peuvent être chargées dans une vue et interagir avec le visiteur via des requêtes Ajax sans avoir à recharger la page entière. Ceci est fait via l'assistant ``LOAD`` qui autorise un design très modulaire des applications; ce sujet est traité dans le chapitre 3 dans le contexte du wiki et un peu plus en détails dans le dernier chapitre de ce livre.
 
 Cette 5ème édition de ce livre décrit ``web2py`` 2.4.1 et les versions suivantes.
 
