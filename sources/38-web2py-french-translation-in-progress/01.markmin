@@ -15,7 +15,7 @@ et les faire fonctionner ensemble.
 web2py est construit pour la sécurité. Cela signifie qu'il élimine automatiquement la plupart des problèmes
 qui peuvent amener à des failles de sécurité, en suivant des pratiques bien établies. Par
 exemple, toute entrée est validée (pour éviter les injections), toute sortie est contrôlée (pour éviter le cross-site scripting),
-et tout fichier uploadé est renommé (pour éviter toute attaque traverse de répertoireà.
+et tout fichier uploadé est renommé (pour éviter toute attaque par traversée de répertoires).
 web2py fait attention aux principaux problèmes de sécurité, afin que les développeurs aient le moins de chande d'introduire des failles dans leur développement.
 
 web2py inclut une couche d'abstraction à la base de données (Database Abstraction Layer -DAL) qui écrit les requêtes SQL``sql-w``:cite  dynamiquement afin que vous, développeurs, n'ayez pas à le faire. Cette couche d'abstraction (DAL) sait parfaitement comment générer les requêtes SQL de manière transparente pour
